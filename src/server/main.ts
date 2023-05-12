@@ -2,6 +2,7 @@ import express from 'express';
 import ViteExpress from 'vite-express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
+import Project from './model/Project';
 
 dotenv.config({ path: './src/server/config/config.env' });
 
@@ -13,9 +14,11 @@ connectDB();
 // Desc:    Get All Projects
 // Route:   GET /api/v1/projects/
 // Access:  Public
-app.get('/api/v1/projects', (_, res) => {
+app.get('/api/v1/projects', async (_, res) => {
 	try {
-		res.status(200).json({ success: true, msg: 'Show all projects' });
+		const projects = await Project.find();
+
+		res.status(200).json({ success: true, data: projects });
 	} catch (err) {
 		res.status(400).json({ success: false });
 	}
