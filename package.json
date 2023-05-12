@@ -6,7 +6,9 @@
     "dev-fe": "vite",
     "dev-be": "nodemon src/server/main.ts -w src/server",
     "start": "NODE_ENV=production ts-node src/server/main.ts",
-    "build": "vite build"
+    "build": "vite build",
+    "import": "ts-node src/server/seeder.ts -i",
+    "delete": "ts-node src/server/seeder.ts -d"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
