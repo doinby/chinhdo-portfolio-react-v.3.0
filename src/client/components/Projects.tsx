@@ -1,5 +1,17 @@
 import { useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
+import ProjectCard from './ProjectCard';
+
+interface ProjectInterface {
+	_id: string;
+	coverImg: string;
+	desc: string;
+	github: string;
+	lastUpdated: Date;
+	live: string;
+	stacks: [];
+	title: string;
+}
 
 const url = `http://localhost:4000/api/v1/projects`;
 
@@ -14,15 +26,19 @@ export default function Projects() {
 	}, [data]);
 
 	return (
-		<section className='flex flex-col gap-6 px-16 py-14'>
-			<h2 className='font-header text-2xl text-center'>
-				Projects I've worked on:
-			</h2>
+		<section className='prose max-w-none flex flex-col py-14'>
+			<h2 className='text-center'>Projects I've worked on:</h2>
 			{error && <>Cannot fetch</>}
 			{isLoading ? (
 				<p className={error && 'hidden'}>Loading...</p>
 			) : (
-				<p className={error && 'hidden'}>show projects</p>
+				<div className={`${error && 'hidden'} grid grid-cols-2 gap-16`}>
+					{data instanceof Array
+						? data.map((projectData: ProjectInterface) => (
+								<ProjectCard key={projectData._id} data={projectData} />
+						  ))
+						: ''}
+				</div>
 			)}
 		</section>
 	);

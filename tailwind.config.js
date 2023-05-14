@@ -7,5 +7,5 @@ module.exports = {
 			header: ['MinigapBold', 'sans-serif'],
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 };
