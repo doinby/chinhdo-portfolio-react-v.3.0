@@ -1,36 +1,45 @@
 [
    {
+      "title": "The Forgotten Adoption Option App",
+      "desc": "The Forgotten Adoption Option App is your forever family formation guide. The primary goal for this app is teach future adoptive families how to adopt one or more of the 115,000 children are who waiting in the United States foster care system",
+      "coverImg": "/images/screenshots/cover-forgotten.jpg",
+      "live": "https://forgottenadoptionoption.app/",
+      "lastUpdated": "2023-05-02",
+      "stacks": [
+         "React",
+         "MUI"
+      ]
+   },
+   {
       "title": "Nanum Movie App",
-      "desc": "Nanum Movie App offers useful information about Movies. User can also get interesting movie suggestions, search and save to favourite",
-      "coverImg": "/images/placeholder.jpg",
+      "desc": "Nanum Movie App offers useful information about Movies. User can also get movie suggestion based on mood and save to favourite",
+      "coverImg": "/images/screenshots/cover-nanum.jpg",
       "github": "https://github.com/chingu-voyages/v41-geckos-team-18",
       "live": "https://movie-app-geckos-18.netlify.app/",
       "lastUpdated": "2023-02-13",
       "stacks": [
          "React",
-         "MUI",
-         "React Router",
-         "Netlify"
+         "Typescript",
+         "Tailwind"
       ]
    },
    {
       "title": "Nation Flags",
       "desc": "Nation Flags is a ReactJS app that helps users learn crucial information about a country. Details such as population, capital, native name and national flag are organized in a clear and concise manner",
-      "coverImg": "/images/placeholder.jpg",
+      "coverImg": "/images/screenshots/cover-nation.jpg",
       "github": "https://github.com/doinby/nation-flags-react-typescript",
       "live": "https://nation-flags.co/",
       "lastUpdated": "2022-09-08",
       "stacks": [
          "React",
          "Typescript",
-         "Tailwind",
-         "React Router"
+         "Tailwind"
       ]
    },
    {
       "title": "Currency Conversion App",
       "desc": "Currency Conversion App uses ExchangeRate-API to update the most current rate on the market. Featuring 160 common currencies, automatic update new changes, and switching places between 2 currencies",
-      "coverImg": "/images/placeholder.jpg",
+      "coverImg": "/images/screenshots/cover-currency.jpg",
       "github": "https://github.com/doinby/currency-conversion-react",
       "live": "https://cc-react.co/",
       "lastUpdated": "2022-08-23",
