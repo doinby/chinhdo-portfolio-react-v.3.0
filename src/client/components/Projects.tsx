@@ -26,8 +26,8 @@ export default function Projects() {
 	}, [data]);
 
 	return (
-		<section className='prose max-w-none flex flex-col py-14'>
-			<h2 className='text-center'>Projects I've worked on:</h2>
+		<section className='prose max-w-none flex flex-col'>
+			<h2 className='text-center text-3xl mb-16'>Projects I've worked on:</h2>
 			{error && <>Cannot fetch</>}
 			{isLoading ? (
 				<p className={error && 'hidden'}>Loading...</p>

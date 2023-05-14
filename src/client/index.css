@@ -33,9 +33,12 @@
 	}
 
 	header,
-	footer,
-	main {
+	footer {
 		@apply container mx-auto px-16 py-8;
+	}
+
+	main {
+		@apply container mx-auto px-16;
 	}
 }
 
@@ -55,14 +58,5 @@
 
 	p {
 		@apply tracking-wide;
-	}
-
-	.cover-gradient {
-		background: rgb(36, 24, 0);
-		background: linear-gradient(
-			180deg,
-			rgba(36, 24, 0, 0) 30%,
-			rgb(255, 255, 255) 100%
-		);
 	}
 }
