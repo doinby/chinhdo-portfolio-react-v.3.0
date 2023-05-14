@@ -16,11 +16,11 @@ connectDB();
 // Access:  Public
 app.get('/api/v1/projects', async (_, res) => {
 	try {
-		const projects = await Project.find();
+		const projects = await Project.find().sort({ lastUpdated: -1 });
 
-		res.status(200).json({ success: true, data: projects });
+		res.status(200).json(projects);
 	} catch (err) {
-		res.status(400).json({ success: false });
+		res.status(400).json(err);
 	}
 });
 
