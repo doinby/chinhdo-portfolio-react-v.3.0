@@ -1,5 +1,6 @@
 import express from 'express';
 import ViteExpress from 'vite-express';
+import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
 import Project from './model/Project';
@@ -9,6 +10,7 @@ dotenv.config({ path: './src/server/config/config.env' });
 const PORT = Number(process.env.PORT) || 8000;
 
 const app = express();
+app.use(cors());
 connectDB();
 
 // Desc:    Get All Projects
