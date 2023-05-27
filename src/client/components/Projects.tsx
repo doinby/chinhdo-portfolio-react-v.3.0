@@ -44,9 +44,7 @@ export default function Projects() {
 			<div className={`${error && 'hidden'} grid grid-cols-2 gap-16`}>
 				{data instanceof Array &&
 					data.map((projectData: IProject) => (
-						<>
-							<ProjectCard key={projectData._id} data={projectData} />
-						</>
+						<ProjectCard key={projectData._id} data={projectData} />
 					))}
 			</div>
 		</section>
