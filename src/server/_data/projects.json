@@ -1,18 +1,21 @@
 [
    {
       "title": "The Forgotten Adoption Option App",
-      "desc": "The Forgotten Adoption Option App is your forever family formation guide. The primary goal for this app is teach future adoptive families how to adopt one or more of the 115,000 children are who waiting in the United States foster care system",
+      "desc": "Living in the U.S. and thinking about adoption? FAO aims to increase the chance of 400,000 waiting children finding their forever home by offering potential parent(s) with actionable 8-steps guide",
+      "content": "",
       "coverImg": "/images/screenshots/cover-forgotten.jpg",
       "live": "https://forgottenadoptionoption.app/",
       "lastUpdated": "2023-05-02",
       "stacks": [
          "React",
+         "Typescript",
          "MUI"
       ]
    },
    {
       "title": "Nanum Movie App",
-      "desc": "Nanum Movie App offers useful information about Movies. User can also get movie suggestion based on mood and save to favourite",
+      "desc": "Not just another IMDB, Nanum (공유, means “sharing”) App is your go-to movie suggestion. Take your pick at the most popular, or get a collection of titles based on how you are feeling",
+      "content": "",
       "coverImg": "/images/screenshots/cover-nanum.jpg",
       "github": "https://github.com/chingu-voyages/v41-geckos-team-18",
       "live": "https://movie-app-geckos-18.netlify.app/",
@@ -25,7 +28,8 @@
    },
    {
       "title": "Nation Flags",
-      "desc": "Nation Flags is a ReactJS app that helps users learn crucial information about a country. Details such as population, capital, native name and national flag are organized in a clear and concise manner",
+      "desc": "Nation Flags allows users to look up crucial information about a country. Population, capital, native name, national flag, etc. are organised in a clear and concise manner, allowing for effortless information flow",
+      "content": "",
       "coverImg": "/images/screenshots/cover-nation.jpg",
       "github": "https://github.com/doinby/nation-flags-react-typescript",
       "live": "https://nation-flags.co/",

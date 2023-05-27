@@ -9,28 +9,28 @@ export default function Footer() {
 			<section className='w-full flex justify-evenly'>
 				<a href='https://www.linkedin.com/in/doinby'>
 					<Linkedin
-						className='text-orange-500 hover:text-orange-700'
+						className='text-slate-500 hover:text-orange-500'
 						size='32'
 						title='Linkedin Link'
 					/>
 				</a>
 				<a href='https://github.com/doinby'>
 					<Github
-						className='text-orange-500 hover:text-orange-700'
+						className='text-slate-500 hover:text-orange-500'
 						size='32'
 						title='Github Link'
 					/>
 				</a>
 				<a href='https://twitter.com/doinby'>
 					<Twitter
-						className='text-orange-500 hover:text-orange-700'
+						className='text-slate-500 hover:text-orange-500'
 						size='32'
 						title='Twitter Link'
 					/>
 				</a>
 				<a href='mailto:chinh@doinby.co'>
 					<Mail
-						className='text-orange-500 hover:text-orange-700'
+						className='text-slate-500 hover:text-orange-500'
 						size='32'
 						title='E-mail Link'
 					/>
