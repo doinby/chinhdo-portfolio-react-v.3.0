@@ -1,23 +1,36 @@
 import { Schema, model } from 'mongoose';
-interface ProjectInterface {
+interface IProject {
 	title: string;
 	desc: string;
 	coverImg: string;
 	github: string;
 	live: string;
 	lastUpdated: Date;
-	stacks: any;
+	stacks: [];
+	content: string;
 }
 
-const ProjectSchema = new Schema<ProjectInterface>({
+const ProjectSchema = new Schema<IProject>({
 	title: { type: String, unique: true },
 	desc: { type: String },
 	github: { type: String, unique: true },
 	live: { type: String, unique: true },
 	coverImg: { type: String },
 	lastUpdated: { type: Date },
-	stacks: { type: [String] },
+	stacks: {
+		type: [String],
+		enum: [
+			'Typescript',
+			'React',
+			'Node.js',
+			'Tailwind',
+			'MUI',
+			'Express',
+			'MongoDB',
+		],
+	},
+	content: { type: String },
 });
 
-const Project = model<ProjectInterface>('Project', ProjectSchema);
+const Project = model<IProject>('Project', ProjectSchema);
 export default Project;
