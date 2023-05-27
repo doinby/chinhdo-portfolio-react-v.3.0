@@ -27,6 +27,7 @@ const ProjectSchema = new Schema<IProject>({
 			'MUI',
 			'Express',
 			'MongoDB',
+			'Sass',
 		],
 	},
 	content: { type: String },
