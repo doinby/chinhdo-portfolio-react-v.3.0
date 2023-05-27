@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
 import ProjectCard from './ProjectCard';
-
 interface ProjectInterface {
 	_id: string;
 	coverImg: string;
@@ -13,7 +12,7 @@ interface ProjectInterface {
 	title: string;
 }
 
-const url = `http://localhost:4000/api/v1/projects`;
+const url = `${import.meta.env.VITE_API_URL}/projects`;
 
 export default function Projects() {
 	const { data, error } = useFetch(url);
@@ -25,21 +24,31 @@ export default function Projects() {
 		}
 	}, [data]);
 
+	if (error instanceof Object) {
+		return (
+			<img
+				src='/images/illustrations/404.svg'
+				alt='No Server Response'
+				className='h-96'
+			/>
+		);
+	}
+
+	if (isLoading) {
+		return <img src='/spinner.svg' alt='Loading...' className='h-20' />;
+	}
+
 	return (
 		<section className='prose max-w-none flex flex-col'>
 			<h2 className='text-center text-3xl mb-16'>Projects I've worked on:</h2>
-			{error && <>Cannot fetch</>}
-			{isLoading ? (
-				<p className={error && 'hidden'}>Loading...</p>
-			) : (
-				<div className={`${error && 'hidden'} grid grid-cols-2 gap-16`}>
-					{data instanceof Array
-						? data.map((projectData: ProjectInterface) => (
-								<ProjectCard key={projectData._id} data={projectData} />
-						  ))
-						: ''}
-				</div>
-			)}
+			<div className={`${error && 'hidden'} grid grid-cols-2 gap-16`}>
+				{data instanceof Array &&
+					data.map((projectData: ProjectInterface) => (
+						<>
+							<ProjectCard key={projectData._id} data={projectData} />
+						</>
+					))}
+			</div>
 		</section>
 	);
 }
