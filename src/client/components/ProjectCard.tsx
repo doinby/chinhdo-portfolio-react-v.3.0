@@ -1,6 +1,6 @@
 import dateFn from 'date-fn';
 import { Home } from 'styled-icons/entypo';
-interface ProjectInterface {
+interface IProjectProps {
 	data: {
 		_id: string;
 		coverImg: string;
@@ -13,7 +13,7 @@ interface ProjectInterface {
 	};
 }
 
-export default function ProjectCard({ data }: ProjectInterface) {
+export default function ProjectCard({ data }: IProjectProps) {
 	const { coverImg, desc, github, lastUpdated, live, stacks, title } = data;
 
 	const descShort = desc.split(' ').slice(0, 21).join(' ');
@@ -86,7 +86,7 @@ export default function ProjectCard({ data }: ProjectInterface) {
 			<p className='px-12 mt-0'>
 				{`${descShort}${isShortened ? '...' : ''}`}{' '}
 				{isShortened && (
-					<span className='text-orange-500 hover:text-orange-700 underline underline-offset-2'>
+					<span className='text-slate-500 hover:text-orange-500 underline underline-offset-2'>
 						<small>Read more</small>
 					</span>
 				)}

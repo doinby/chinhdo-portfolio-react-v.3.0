@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
 import ProjectCard from './ProjectCard';
-interface ProjectInterface {
+interface IProject {
 	_id: string;
 	coverImg: string;
 	desc: string;
@@ -43,7 +43,7 @@ export default function Projects() {
 			<h2 className='text-center text-3xl mb-16'>Projects I've worked on:</h2>
 			<div className={`${error && 'hidden'} grid grid-cols-2 gap-16`}>
 				{data instanceof Array &&
-					data.map((projectData: ProjectInterface) => (
+					data.map((projectData: IProject) => (
 						<>
 							<ProjectCard key={projectData._id} data={projectData} />
 						</>
