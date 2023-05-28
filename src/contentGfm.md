@@ -1,5 +1,3 @@
-## Overview
-
 Nation Flags allows users to look up crucial information about a country. Population, capital, native name, national flag, etc. are organised in a clear and concise manner, allowing for effortless information flow.
 
 This is a solo project 🌟
@@ -17,20 +15,6 @@ Users should be able to:
 - Click through to the border countries on the detail page
 - Toggle the color scheme between light and dark mode _(optional)_
 
-### Screenshot
-
-![Screenshot 1](./images/screenshot-home-light.png)
-![Screenshot 2](./images/screenshot-home-dark.png)
-![Screenshot 3](./images/screenshot-country-light.png)
-
-### Links
-
-- [Live Site](https://nation-flags.co/)
-- [Github Repository](https://github.com/doinby/nation-flags-react-typescript)
-- [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/nation-flags-reactjs-typescript-tailwindcss-lznt5b_nGD)
-
-## My process
-
 ### Built with
 
 - [React](https://reactjs.org/)
@@ -42,7 +26,7 @@ Users should be able to:
 - CSS Flexbox, Grid
 - Mobile-first workflow
 
-## What I learned
+### What I learned
 
 - The power of Typescript 💪
 - Tailwind darkmode is amazing 🌓. Take that, MUI! 👎
@@ -61,4 +45,3 @@ Users should be able to:
 
 - [React Typescript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example/) - Great code example of declaring common React types
 - [Ultimate React Router 6 Guide](https://blog.webdevsimplified.com/2022-07/react-router/) - I used this to learn how to dynamically route individual country page, what `useParam()` does, how to use `<Link>` and `<Outlet />`
-- [Tailwind Dark Mode Doc](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually) - Tailwind's dark mode is so much easier to implement compares to MUI 🤩
