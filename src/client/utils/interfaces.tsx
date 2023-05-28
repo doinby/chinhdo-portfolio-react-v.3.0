@@ -6,6 +6,7 @@ export interface IProject {
 	lastUpdated?: Date;
 	live?: string;
 	stacks?: [];
+	screenshots?: [];
 	title?: string;
 	content?: string;
 }

@@ -7,6 +7,7 @@ interface IProject {
 	live: string;
 	lastUpdated: Date;
 	stacks: [];
+	screenshots: [];
 	content: string;
 }
 
@@ -30,6 +31,7 @@ const ProjectSchema = new Schema<IProject>({
 			'Sass',
 		],
 	},
+	screenshots: { type: [String] },
 	content: { type: String },
 });
 
